@@ -1,0 +1,36 @@
+{
+	"data-transfers": {
+		"ul-udp": {
+			"client": {
+				"cmd": "iperf -u -c 127.0.0.1 -b 100M -t 5s -i 1",
+				"host": "server-2"
+			},
+			"server": {
+                "cmd": "iperf -s -u -i 1",
+                "host": "server-1"
+            }
+		},
+		"dl-udp": {
+			"client": {
+				"cmd": "iperf -u -c 127.0.0.1 -b 100M -t 5s -i 1",
+				"host": "server-2"
+			},
+			"server": {
+                "cmd": "iperf -s -u -i 1",
+                "host": "server-1"
+            }
+		}
+	},
+	"hosts": {
+		"server-1": {
+			"i-p": "192.168.1.1",
+			"u-s-e-r-n-a-m-e": "user-1",
+			"p-a-s-s-w-o-r-d": "passord-1"
+		},
+		"server-2": {
+            "ip": "192.169.1.2",
+            "username": "user-2",
+            "password": "password-12"
+        }
+	}
+}

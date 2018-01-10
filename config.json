@@ -1,0 +1,36 @@
+{
+	"data-transfers": {
+		"ul-udp": {
+			"client": {
+				"cmd": "iperf -u -c 127.0.0.1 -b 100M -t 5s -i 1",
+				"host": "pi-server"
+			},
+			"server": {
+                "cmd": "iperf -s -u -i 1",
+                "host": "onion-server"
+            }
+		},
+		"dl-udp": {
+			"client": {
+				"cmd": "iperf -u -c 127.0.0.1 -b 100M -t 5s -i 1",
+				"host": "pi-server"
+			},
+			"server": {
+                "cmd": "iperf -s -u -i 1",
+                "host": "onion-server"
+            }
+		}
+	},
+	"hosts": {
+		"pi-server": {
+			"ip": "127.0.0.1",
+			"username": "pi",
+			"password": "marWa1.."
+		},
+		"onion-server": {
+            "ip": "127.0.0.1",
+            "username": "pi",
+            "password": "marWa1.."
+        }
+	}
+}

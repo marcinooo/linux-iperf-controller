@@ -1,0 +1,36 @@
+{
+	"d-a-t-a-t-r-a-n-s-f-e-r-s": {
+		"ul-udp": {
+			"client": {
+				"cmd": "iperf -u -c 127.0.0.1 -b 100M -t 5s -i 1",
+				"host": "server-2"
+			},
+			"server": {
+                "cmd": "iperf -s -u -i 1",
+                "host": "server-1"
+            }
+		},
+		"dl-udp": {
+			"client": {
+				"cmd": "iperf -u -c 127.0.0.1 -b 100M -t 5s -i 1",
+				"host": "server-2"
+			},
+			"server": {
+                "cmd": "iperf -s -u -i 1",
+                "host": "server-1"
+            }
+		}
+	},
+	"h-o-s-t-s": {
+		"server-1": {
+			"ip": "192.168.1.1",
+			"username": "user-1",
+			"password": "passord-1"
+		},
+		"server-2": {
+            "ip": "192.169.1.2",
+            "username": "user-2",
+            "password": "password-12"
+        }
+	}
+}
